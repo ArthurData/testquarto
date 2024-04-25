@@ -1,0 +1,24 @@
+---
+title: ""
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+## Observable JS
+
+This Quarto document is made interactive using Observable JS. Interactive documents allow readers to modify parameters and see the results immediately. Learn more about OJS interactive documents at <https://quarto.org/docs/interactive/ojs/>.
+
+## Bubble Chart
+
+This example uses a D3 bubble chart imported from Observable HQ to analyze commits to GitHub repositories.
+
+Select a repository to analyze the commits of:
+
+```{ojs}
+viewof state = Inputs.select(["Alabama", "Alaska", "Arizona", "Arkansas", "California"])
+```
+
+
+That's work
