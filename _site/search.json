@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Pouet",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "This is a Quarto website."
   },
   {
     "objectID": "index.html#observable-js",
@@ -25,6 +25,6 @@
     "href": "index.html#bubble-chart",
     "title": "Pouet",
     "section": "Bubble Chart",
-    "text": "Bubble Chart\nThis example uses a D3 bubble chart imported from Observable HQ to analyze commits to GitHub repositories.\nSelect a repository to analyze the commits of:\n\nviewof state = Inputs.select([\"Alabama\", \"Alaska\", \"Arizona\", \"Arkansas\", \"California\"])\n\n\n\n\n\n\nThat’s work"
+    "text": "Bubble Chart\nThis example uses a D3 bubble chart imported from Observable HQ to analyze commits to GitHub repositories.\nSelect a repository to analyze the commits of:\n\nojs_define(iris = iris)\n\n\nviewof axisx = Inputs.select([\"Sepal.Length\", \"Sepal.Width\", \"Petal.Length\", \"Petal.Width\"])\n\n\n\n\n\n\n\nviewof axisy = Inputs.select([\"Sepal.Length\", \"Sepal.Width\", \"Petal.Length\", \"Petal.Width\"])\n\n\n\n\n\n\n\ntranspose(iris)\n\n\n\n\n\n\n\nyearlyChart = Plot.plot({\n  marks: [\n    Plot.dot(transpose(iris), \n      {x: axisx, y: axisy}, \n      { stroke: \"black\" }\n    )\n  ]}\n)\n\n\n\n\n\n\nThat’s work"
   }
 ]

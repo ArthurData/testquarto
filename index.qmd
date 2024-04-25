@@ -4,20 +4,38 @@ title: ""
 
 This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-## Observable JS
-
-This Quarto document is made interactive using Observable JS. Interactive documents allow readers to modify parameters and see the results immediately. Learn more about OJS interactive documents at <https://quarto.org/docs/interactive/ojs/>.
-
 ## Bubble Chart
 
 This example uses a D3 bubble chart imported from Observable HQ to analyze commits to GitHub repositories.
 
 Select a repository to analyze the commits of:
 
+```{r}
+ojs_define(iris = iris)
+```
+
+
 ```{ojs}
-viewof state = Inputs.select(["Alabama", "Alaska", "Arizona", "Arkansas", "California"])
+viewof axisx = Inputs.select(["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"])
+```
+
+```{ojs}
+viewof axisy = Inputs.select(["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"])
+```
+
+```{ojs}
+transpose(iris)
+```
+
+```{ojs}
+yearlyChart = Plot.plot({
+  marks: [
+    Plot.dot(transpose(iris), 
+      {x: axisx, y: axisy}, 
+      { stroke: "black" }
+    )
+  ]}
+)
 ```
 
 
